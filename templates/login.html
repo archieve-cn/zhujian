@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block style %}
+  <link rel="stylesheet" href="static/css/login.css">
+{% endblock %}
+
+{% block content %}
+    <form class="form-signin" role="form" action="{{ url_for('login') }}" method="post">
+      <h2 class="form-signin-heading">铸剑登录</h2>
+      <label for="exampleInputEmail1">邮箱</label>
+      <input type="text" name="username" class="form-control" placeholder="Email address" required autofocus>
+      <label for="exampleInputPassword1">密码</label>
+      <input type="password" name="password" class="form-control" placeholder="password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+    </form>
+{% endblock %}
